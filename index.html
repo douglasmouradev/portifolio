@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Douglas Moura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #3b82f6;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: #9ca3af;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #3b82f6;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 0 3rem;
+      background: radial-gradient(circle at top left, #1d4ed8 0, transparent 55%),
+                  radial-gradient(circle at bottom right, #0f766e 0, transparent 55%),
+                  #020617;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      border: 2px solid #3b82f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 2.5rem;
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #f9fafb;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #3b82f6;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text {
+      max-width: 550px;
+      margin: 0 auto 2rem;
+      color: #9ca3af;
+      font-size: 0.98rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+      padding: 0.75rem 1.8rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #e5e7eb;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid #374151;
+      cursor: pointer;
+      transition: border 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: #3b82f6;
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #f9fafb;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 550px;
+      margin: 0 auto 2.5rem;
+      color: #9ca3af;
+      font-size: 0.95rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: #020617;
+      border-radius: 0.9rem;
+      overflow: hidden;
+      border: 1px solid #111827;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-image {
+      height: 170px;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid #0b1220;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-icon {
+      width: 56px;
+      height: 56px;
+    }
+
+    .project-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      stroke: #f9fafb;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .project-image--titanium {
+      background-color: #0f766e;
+      background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&h=500&fit=crop');
+    }
+
+    .project-image--controll {
+      background-color: #1d4ed8;
+      background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&h=500&fit=crop');
+    }
+
+    .project-image--gestao {
+      background-color: #b45309;
+      background-image: url('https://images.unsplash.com/photo-1569025690938-a00729c9e1ff?w=900&h=500&fit=crop');
+    }
+
+    .project-body {
+      padding: 1.3rem 1.4rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.3rem;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.14);
+      color: #60a5fa;
+    }
+
+    .project-links {
+      margin-top: 0.6rem;
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .link-btn {
+      font-size: 0.82rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+      transition: background 0.2s ease, border 0.2s ease;
+    }
+
+    .link-btn:hover {
+      border-color: #3b82f6;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .stat-card {
+      background: #020617;
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.1rem 1rem;
+      border: 1px solid #111827;
+      text-align: left;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #6b7280;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #3b82f6;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: #020617;
+      border-radius: 0.9rem;
+      padding: 1.4rem 1.3rem;
+      border: 1px solid #111827;
+      margin-bottom: 0.9rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.06em;
+    }
+
+    .contact-form {
+      background: #020617;
+      border-radius: 0.9rem;
+      padding: 1.5rem 1.4rem 1.4rem;
+      border: 1px solid #111827;
+    }
+
+    .form-group {
+      margin-bottom: 0.9rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 0.25rem;
+      color: #d1d5db;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: #020617;
+      border-radius: 0.5rem;
+      border: 1px solid #111827;
+      padding: 0.6rem 0.7rem;
+      color: #e5e7eb;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+      resize: vertical;
+      min-height: 42px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4);
+    }
+
+    textarea {
+      min-height: 110px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #111827;
+      padding: 1.5rem 0;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 1.9rem;
+      }
+
+      section {
+        padding: 3rem 0;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Douglas Moura</div>
+      <nav class="nav-links">
+        <a href="#home">Início</a>
+        <a href="#projects">Projetos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-avatar">👨‍💻</div>
+        <h1 class="hero-title">Douglas Moura</h1>
+        <p class="hero-subtitle">Desenvolvedor Full Stack</p>
+        <p class="hero-text">
+          Desenvolvedor apaixonado por criar soluções web modernas, performáticas e bem estruturadas.
+          Experiência com aplicações completas do backend ao frontend, sempre focando em boa experiência do usuário.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">Ver projetos</a>
+          <a href="#contact" class="btn-secondary">Falar comigo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projetos em Destaque</h2>
+        <p class="section-subtitle">
+          Alguns dos projetos que desenvolvi recentemente. Cada um representa desafios reais resolvidos com tecnologia.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image project-image--titanium">
+              <div class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="11" width="4" height="7" rx="1" />
+                  <rect x="10" y="7" width="4" height="11" rx="1" />
+                  <rect x="17" y="4" width="4" height="14" rx="1" />
+                  <path d="M3 20h18" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Titanium CRM de Diárias</h3>
+              <p class="project-desc">
+                Versão atualizada do CRM web proprietário da Titanium Engineering, reescrita em PHP 8+, MySQL e Tailwind CSS,
+                com autenticação, papéis de acesso, dashboard de KPIs, relatórios em PDF/Excel e API REST completa.
+              </p>
+              <div class="tags">
+                <span class="tag">PHP 8+</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">API REST</span>
+              </div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/douglasmouradev/titanium-v2" target="_blank">Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image project-image--controll">
+              <div class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3a7 7 0 0 0-7 7v4" />
+                  <path d="M19 14v-4a7 7 0 0 0-7-7" />
+                  <rect x="3" y="11" width="4" height="6" rx="1" />
+                  <rect x="17" y="11" width="4" height="6" rx="1" />
+                  <path d="M10 19h4a2 2 0 0 1-4 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Controll IT Help Desk</h3>
+              <p class="project-desc">
+                Aplicação de help desk em PHP 8 (MVC) com MySQL, Tailwind e JavaScript, incluindo autenticação com sessões,
+                ACL por perfis, abertura e gestão de chamados, dashboard com filtros e interação em tempo real via AJAX.
+              </p>
+              <div class="tags">
+                <span class="tag">PHP 8+</span>
+                <span class="tag">MVC</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/douglasmouradev/controll-v2" target="_blank">Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image project-image--gestao">
+              <div class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="8" cy="8" r="3" />
+                  <path d="M4 20c0-2.2 1.8-4 4-4s4 1.8 4 4" />
+                  <path d="M13 6l3-3 3 3" />
+                  <path d="M16 3v10" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Gestão Financeira para PMEs</h3>
+              <p class="project-desc">
+                Sistema de gestão financeira desenvolvido com Next.js 14, TypeScript, Prisma e PostgreSQL. Oferece dashboard,
+                controle de receitas e despesas, clientes, fornecedores, notas fiscais e fluxo de caixa para pequenas e médias empresas.
+              </p>
+              <div class="tags">
+                <span class="tag">Next.js 14</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Prisma</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">SaaS</span>
+              </div>
+              <div class="project-links">
+                <a class="link-btn" href="https://github.com/douglasmouradev/gestao-financeira" target="_blank">Ver no GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <p class="section-subtitle">
+          Um pouco sobre minha experiência, foco de atuação e o que busco entregar em cada projeto.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Sou um desenvolvedor full stack com foco em criar aplicações web completas, desde a modelagem de
+              dados até interfaces modernas e responsivas. Gosto de trabalhar com boas práticas, código limpo
+              e testes.
+            </p>
+            <br />
+            <p>
+              Tenho experiência com desenvolvimento de APIs REST, autenticação, integrações com serviços de
+              terceiros e painéis administrativos. No frontend, busco sempre entregar interfaces claras,
+              rápidas e fáceis de usar.
+            </p>
+            <br />
+            <p>
+              Estou sempre estudando novas tecnologias e melhores formas de resolver problemas reais com
+              software.
+            </p>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label">Projetos entregues</div>
+              <div class="stat-value">15+</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Anos de experiência</div>
+              <div class="stat-value">3+</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Stack principal</div>
+              <div class="stat-value">PHP & JAVASCRIPT</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Cidade</div>
+              <div class="stat-value">Salvador - BA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="section-subtitle">
+          Interessado em trabalhar comigo ou tirar alguma dúvida? Entre em contato pelos canais abaixo.
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-card">
+              <div class="contact-label">Email</div>
+              <a href="mailto:douglas.hennrique@hotmail.com">douglas.hennrique@hotmail.com</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">GitHub</div>
+              <a href="https://github.com/douglasmouradev" target="_blank">github.com/douglasmouradev</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-label">LinkedIn</div>
+              <a href="https://linkedin.com/in/douglasmoura-ti" target="_blank">linkedin.com/in/douglasmoura-ti</a>
+            </div>
+          </div>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Obrigado pela mensagem!');">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input id="name" type="text" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="seu.email@exemplo.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" placeholder="Escreva sua mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Enviar mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Douglas Moura — Portfólio de projetos.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
