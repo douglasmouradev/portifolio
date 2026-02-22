@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Douglas Moura - Desenvolvedor Full Stack">
+  <title>Douglas Moura | Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">Douglas Moura</a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-badge">Desenvolvedor Full Stack</span>
+        <h1 class="hero-title">
+          Olá, sou <span class="highlight">Douglas Moura</span>
+        </h1>
+        <p class="hero-description">
+          Desenvolvedor focado em criar soluções robustas e escaláveis. 
+          Especialista em sistemas de Help Desk, CRM e aplicações web com PHP, MySQL e tecnologias modernas.
+        </p>
+        <div class="hero-cta">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-block">
+          <span class="code-line"><span class="code-keyword">const</span> dev = {</span>
+          <span class="code-line">  stack: [<span class="code-string">'PHP'</span>, <span class="code-string">'MySQL'</span>, <span class="code-string">'JavaScript'</span>],</span>
+          <span class="code-line">  focus: <span class="code-string">'Help Desk & CRM'</span>,</span>
+          <span class="code-line">  location: <span class="code-string">'Salvador, BA'</span></span>
+          <span class="code-line">};</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <p class="about-text">
+          Desenvolvedor com experiência em sistemas de gestão de chamados, CRM e Help Desk. 
+          Domínio em PHP nativo com arquitetura MVC, MySQL, autenticação segura, controle de acesso (ACL) 
+          e interfaces responsivas. Apaixonado por código limpo e soluções que fazem a diferença.
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">📋</span>
+              <span class="project-tag">PHP • MVC • MySQL</span>
+            </div>
+            <h3 class="project-title">Tsolutions - CRM Chamados</h3>
+            <p class="project-description">
+              Sistema de chamados (tickets) estilo CRM em PHP nativo com arquitetura MVC. 
+              Dashboard, CRUD completo, atribuição a agentes, comentários, anexos, filtros avançados e permissões por perfil.
+            </p>
+            <ul class="project-features">
+              <li>Autenticação com rate limit e CSRF</li>
+              <li>Dashboard com métricas por status</li>
+              <li>Upload seguro de anexos</li>
+              <li>Prepared statements (anti-SQLi)</li>
+            </ul>
+            <a href="https://github.com/douglasmouradev/Tsolutions" target="_blank" rel="noopener" class="project-link">
+              Ver no GitHub →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">🎫</span>
+              <span class="project-tag">PHP • Tailwind • Help Desk</span>
+            </div>
+            <h3 class="project-title">Controll IT Help Desk</h3>
+            <p class="project-description">
+              Aplicação de CRM/Help Desk em PHP 8+, MySQL, Tailwind e Vanilla JS. 
+              Sessões PHP, ACL por perfis (superadmin, admin, suporte, gerente, usuário) e integração ViaCEP.
+            </p>
+            <ul class="project-features">
+              <li>Dashboard com filtros rápidos</li>
+              <li>Modal "Ver" com resumo e AJAX</li>
+              <li>Preenchimento automático por CEP</li>
+              <li>Interface visual TDESK</li>
+            </ul>
+            <a href="https://github.com/douglasmouradev/controll-v2" target="_blank" rel="noopener" class="project-link">
+              Ver no GitHub →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">🌐</span>
+              <span class="project-tag">HTML • CSS • JavaScript</span>
+            </div>
+            <h3 class="project-title">Site TDesk Solutions</h3>
+            <p class="project-description">
+              Site institucional do TDesk Solutions - sistema de gestão de chamados técnicos. 
+              Design moderno, responsivo, otimizado para SEO com seções Hero, Funcionalidades, Preços, Demo e Contato.
+            </p>
+            <ul class="project-features">
+              <li>Layout responsivo (mobile-first)</li>
+              <li>Otimizado para SEO</li>
+              <li>Deploy: Vercel, Netlify, GitHub Pages</li>
+              <li>Schema PostgreSQL de referência</li>
+            </ul>
+            <a href="https://github.com/douglasmouradev/site-tdesk" target="_blank" rel="noopener" class="project-link">
+              Ver no GitHub →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">🚀</span>
+              <span class="project-tag">PHP 8.5 • MySQL 9.4</span>
+            </div>
+            <h3 class="project-title">TDesk Solutions (App)</h3>
+            <p class="project-description">
+              Plataforma web completa para gestão de chamados em PHP 8.5 e MySQL 9.4+. 
+              Painel com indicadores em tempo real, gráficos interativos, trilha de auditoria e exportação de relatórios.
+            </p>
+            <ul class="project-features">
+              <li>Autenticação com níveis (admin, suporte, cliente)</li>
+              <li>Exportação Excel e PDF</li>
+              <li>CSRF, rate limiting e validações</li>
+              <li>Deploy automatizado para VPS</li>
+            </ul>
+            <a href="https://github.com/douglasmouradev/app-tdesk" target="_blank" rel="noopener" class="project-link">
+              Ver no GitHub →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">📱</span>
+              <span class="project-tag">Kotlin • MVVM • Android</span>
+            </div>
+            <h3 class="project-title">Lanchonete Android App</h3>
+            <p class="project-description">
+              Aplicativo Android para controle de vendas e estoque de lanchonetes. 
+              Desenvolvido em Kotlin com arquitetura MVVM, Room e Firebase.
+            </p>
+            <ul class="project-features">
+              <li>Vendas com carrinho e múltiplas formas de pagamento</li>
+              <li>Controle de estoque com alertas</li>
+              <li>Relatórios diários, semanais e mensais</li>
+              <li>Material Design 3 e Navigation Component</li>
+            </ul>
+            <a href="https://github.com/douglasmouradev/lanchonete-android-app" target="_blank" rel="noopener" class="project-link">
+              Ver no GitHub →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="contact-text">Interessado em trabalhar junto? Entre em contato!</p>
+        <div class="contact-links">
+          <a href="mailto:douglas.hennrique@hotmail.com" class="contact-link">
+            <span class="contact-icon">✉️</span>
+            douglas.hennrique@hotmail.com
+          </a>
+          <a href="https://wa.me/5571993801480" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon">📱</span>
+            (71) 99380-1480
+          </a>
+          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon">🐙</span>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Douglas Moura. Desenvolvido com dedicação em Salvador, BA.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

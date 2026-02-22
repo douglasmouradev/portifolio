@@ -1,0 +1,35 @@
+# Portfólio - Douglas Moura
+
+Portfólio profissional com os projetos de desenvolvimento.
+
+## Projetos em destaque
+
+- **Tsolutions** - CRM de Chamados em PHP MVC
+- **Controll IT Help Desk** - Sistema de Help Desk em PHP
+- **Site TDesk Solutions** - Site institucional responsivo
+- **TDesk Solutions (App)** - Plataforma web de gestão de chamados em PHP 8.5
+- **Lanchonete Android App** - App Android para gestão de vendas e estoque (Kotlin/MVVM)
+
+## Como visualizar
+
+Abra o arquivo `index.html` no navegador ou use um servidor local:
+
+```bash
+# Python
+python3 -m http.server 8000
+
+# Node.js
+npx serve .
+
+# PHP
+php -S localhost:8000
+```
+
+Acesse: http://localhost:8000
+
+## Deploy
+
+O portfólio é estático e pode ser hospedado em:
+- GitHub Pages
+- Vercel
+- Netlify
