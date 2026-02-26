@@ -1,4 +1,52 @@
-// Menu mobile toggle
+// ===== Tradução PT/EN =====
+const LANG_KEY = 'portfolio-lang';
+let currentLang = localStorage.getItem(LANG_KEY) || 'pt';
+
+function applyTranslations(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const text = t[key];
+    if (text) {
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+  document.title = lang === 'pt' ? 'Douglas Moura | Portfólio' : 'Douglas Moura | Portfolio';
+
+  const langToggle = document.querySelector('.lang-toggle');
+  if (langToggle && t['lang.aria']) {
+    langToggle.setAttribute('aria-label', t['lang.aria']);
+    langToggle.setAttribute('title', t['lang.title']);
+  }
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) {
+    metaDesc.content = lang === 'pt'
+      ? 'Portfólio de Douglas Moura - Desenvolvedor Full Stack'
+      : 'Douglas Moura Portfolio - Full Stack Developer';
+  }
+}
+
+function toggleLanguage() {
+  currentLang = currentLang === 'pt' ? 'en' : 'pt';
+  localStorage.setItem(LANG_KEY, currentLang);
+  applyTranslations(currentLang);
+}
+
+document.querySelector('.lang-toggle')?.addEventListener('click', toggleLanguage);
+
+// Aplicar idioma salvo ao carregar (script está no final do body, DOM já está pronto)
+applyTranslations(currentLang);
+
+// ===== Menu mobile toggle =====
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 

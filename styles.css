@@ -93,6 +93,31 @@ body {
   color: var(--accent);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-toggle:hover {
+  background: rgba(34, 211, 238, 0.2);
+  border-color: var(--accent);
+}
+
+.lang-icon {
+  font-size: 1rem;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
