@@ -11,6 +11,13 @@
 
   if (!loader || !mainContent || !progressBar || !canvas) return;
 
+  // ===== Idioma do loader (respeita preferência salva) =====
+  const savedLang = localStorage.getItem('portfolio-lang') || 'pt';
+  const loaderSubtitle = document.getElementById('loader-subtitle');
+  const loaderLabel = document.getElementById('loader-label');
+  if (loaderSubtitle) loaderSubtitle.textContent = savedLang === 'pt' ? 'Portfólio' : 'Portfolio';
+  if (loaderLabel) loaderLabel.textContent = savedLang === 'pt' ? 'PORTFOLIO INICIANDO' : 'PORTFOLIO LOADING';
+
   // ===== Efeito Matrix Rain =====
   const ctx = canvas.getContext('2d');
   const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
