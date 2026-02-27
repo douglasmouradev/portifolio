@@ -15,7 +15,7 @@
   const savedLang = localStorage.getItem('portfolio-lang') || 'pt';
   const loaderSubtitle = document.getElementById('loader-subtitle');
   const loaderLabel = document.getElementById('loader-label');
-  if (loaderSubtitle) loaderSubtitle.textContent = savedLang === 'pt' ? 'Portfólio' : 'Portfolio';
+  if (loaderSubtitle) loaderSubtitle.textContent = savedLang === 'pt' ? 'Desenvolvedor Full Stack' : 'Full Stack Developer';
   if (loaderLabel) loaderLabel.textContent = savedLang === 'pt' ? 'PORTFOLIO INICIANDO' : 'PORTFOLIO LOADING';
 
   // ===== Efeito Matrix Rain =====
