@@ -11,6 +11,30 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Tela de carregamento (estilo Titanium Telecom) -->
+  <div id="loader" class="loader-overlay">
+    <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+    <div class="loader-content">
+      <div class="loader-logo">
+        <div class="loader-logo-icon"></div>
+        <div class="loader-brand">
+          <span class="loader-title">DOUGLAS MOURA</span>
+          <span class="loader-subtitle">Portfolio</span>
+        </div>
+      </div>
+      <div class="loader-bar-container">
+        <div class="loader-bar">
+          <div id="loader-progress" class="loader-progress"></div>
+        </div>
+        <div class="loader-bar-labels">
+          <span class="loader-label">PORTFOLIO LOADING</span>
+          <span id="loader-version" class="loader-version">v1.0.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-content" class="main-content-hidden">
   <header class="header">
     <nav class="nav">
       <a href="#" class="logo">Douglas Moura</a>
@@ -210,8 +234,10 @@
   <footer class="footer">
     <p data-i18n="footer.text">© 2025 Douglas Moura. Desenvolvido com dedicação em Salvador, BA.</p>
   </footer>
+  </div>
 
   <script src="translations.js"></script>
+  <script src="loader.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
