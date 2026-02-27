@@ -6,8 +6,8 @@ function applyTranslations(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
+  document.querySelectorAll('[data-i18n], [data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n') || el.getAttribute('data-i18n-html');
     const text = t[key];
     if (text) {
       if (el.hasAttribute('data-i18n-html')) {
