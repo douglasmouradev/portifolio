@@ -9,6 +9,7 @@ const translations = {
     'hero.title': 'Olá, sou <span class="highlight">Douglas Moura</span>',
     'hero.description': 'Desenvolvedor focado em criar soluções robustas e escaláveis. Especialista em sistemas de Help Desk, CRM e aplicações web com PHP, MySQL e tecnologias modernas.',
     'hero.ctaProjects': 'Ver Projetos',
+    'hero.codeBlock': '<span class="code-line"><span class="code-keyword">const</span> dev = {</span><span class="code-line">  stack: [<span class="code-string">\'PHP\'</span>, <span class="code-string">\'MySQL\'</span>, <span class="code-string">\'JavaScript\'</span>],</span><span class="code-line">  focus: <span class="code-string">\'Help Desk & CRM\'</span>,</span><span class="code-line">  location: <span class="code-string">\'Salvador, BA\'</span></span><span class="code-line">};</span>',
     'about.title': 'Sobre mim',
     'about.text': 'Desenvolvedor com experiência em sistemas de gestão de chamados, CRM e Help Desk. Domínio em PHP nativo com arquitetura MVC, MySQL, autenticação segura, controle de acesso (ACL) e interfaces responsivas. Apaixonado por código limpo e soluções que fazem a diferença.',
     'projects.title': 'Projetos',
@@ -58,6 +59,7 @@ const translations = {
     'hero.title': 'Hi, I\'m <span class="highlight">Douglas Moura</span>',
     'hero.description': 'Developer focused on creating robust and scalable solutions. Specialist in Help Desk systems, CRM and web applications with PHP, MySQL and modern technologies.',
     'hero.ctaProjects': 'View Projects',
+    'hero.codeBlock': '<span class="code-line"><span class="code-keyword">const</span> dev = {</span><span class="code-line">  stack: [<span class="code-string">\'PHP\'</span>, <span class="code-string">\'MySQL\'</span>, <span class="code-string">\'JavaScript\'</span>],</span><span class="code-line">  focus: <span class="code-string">\'Help Desk & CRM\'</span>,</span><span class="code-line">  location: <span class="code-string">\'Salvador, BA - Brazil\'</span></span><span class="code-line">};</span>',
     'about.title': 'About me',
     'about.text': 'Developer with experience in ticket management systems, CRM and Help Desk. Expertise in native PHP with MVC architecture, MySQL, secure authentication, access control (ACL) and responsive interfaces. Passionate about clean code and solutions that make a difference.',
     'projects.title': 'Projects',
@@ -94,7 +96,7 @@ const translations = {
     'projects.lanchonete.f4': 'Material Design 3 and Navigation Component',
     'contact.title': 'Contact',
     'contact.text': 'Interested in working together? Get in touch!',
-    'footer.text': '© 2025 Douglas Moura. Built with dedication in Salvador, BA.',
+    'footer.text': '© 2025 Douglas Moura. Built with dedication in Salvador, BA - Brazil.',
     'lang.aria': 'Traduzir para português',
     'lang.title': 'Português'
   }
