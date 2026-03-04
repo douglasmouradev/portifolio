@@ -9,6 +9,7 @@ Portfólio profissional com os projetos de desenvolvimento.
 - **Site TDesk Solutions** - Site institucional responsivo
 - **TDesk Solutions (App)** - Plataforma web de gestão de chamados em PHP 8.5
 - **Lanchonete Android App** - App Android para gestão de vendas e estoque (Kotlin/MVVM)
+- **BarbaBook** - Sistema de agendamento para barbeiros e nail design (PHP/MySQL)
 
 ## Como visualizar
 

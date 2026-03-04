@@ -1,5 +1,4 @@
 /**
- * Loader estilo Titanium Telecom (titaniumtelecom.com.br)
  * Efeito Matrix digital rain + barra de progresso
  */
 
