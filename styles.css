@@ -477,6 +477,13 @@ body {
   font-weight: 600;
 }
 
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  align-items: center;
+}
+
 .project-link {
   color: var(--accent);
   font-weight: 600;

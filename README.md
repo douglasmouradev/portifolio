@@ -8,6 +8,7 @@ Portfólio profissional com os projetos de desenvolvimento.
 - **Controll IT Help Desk** - Sistema de Help Desk em PHP
 - **Site TDesk Solutions** - Site institucional responsivo
 - **TDesk Solutions (App)** - Plataforma web de gestão de chamados em PHP 8.5
+- **GranaFlow** - SaaS de finanças pessoais (PHP/MySQL, gráficos, orçamento e recorrências) — [demo](https://granaflow.tdesksolutions.com.br)
 - **Lanchonete Android App** - App Android para gestão de vendas e estoque (Kotlin/MVVM)
 - **BarbaBook** - Sistema de agendamento para barbeiros e nail design (PHP/MySQL)
 
