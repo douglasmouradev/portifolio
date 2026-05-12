@@ -11,6 +11,7 @@ Portfólio profissional com os projetos de desenvolvimento.
 - **GranaFlow** - SaaS de finanças pessoais (PHP/MySQL, gráficos, orçamento e recorrências) — [demo](https://granaflow.tdesksolutions.com.br)
 - **Lanchonete Android App** - App Android para gestão de vendas e estoque (Kotlin/MVVM)
 - **BarbaBook** - Sistema de agendamento para barbeiros e nail design (PHP/MySQL)
+- **CadeiraLivre** - SaaS multi-tenant de agendamento para barbearias (PHP 8.3, MySQL, MVC, Stripe, Docker) — [repositório](https://github.com/douglasmouradev/cadeiralivre)
 
 ## Como visualizar
 
