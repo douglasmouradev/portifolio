@@ -64,7 +64,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Scroll reveal animation
-const revealElements = document.querySelectorAll('.section-title, .about-text, .project-card, .contact-text, .contact-links');
+const revealElements = document.querySelectorAll('.section-head, .about-text, .service-card, .project-card, .project-media, .contact-links, .hero-panel');
 
 const revealOnScroll = () => {
   const windowHeight = window.innerHeight;
@@ -91,10 +91,6 @@ window.addEventListener('scroll', revealOnScroll);
 // Header scroll effect - adicionar sombra ao rolar
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header?.style.setProperty('box-shadow', '0 4px 24px rgba(0, 0, 0, 0.3)');
-  } else {
-    header?.style.setProperty('box-shadow', 'none');
-  }
-});
+const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
+window.addEventListener('scroll', updateHeader);
+window.addEventListener('load', updateHeader);
