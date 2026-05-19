@@ -3,32 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Douglas Moura - Desenvolvedor Full Stack">
+  <meta name="description" content="Douglas Moura - Dev Full Stack. Sites e sistemas sob medida, vagas, freelance e sistemas prontos (Help Desk, CRM, SaaS). Salvador, BA.">
   <title>Douglas Moura | Portfólio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Tela de carregamento (estilo Titanium Telecom) -->
   <div id="loader" class="loader-overlay">
-    <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+    <canvas id="matrix-canvas" hidden></canvas>
     <div class="loader-content">
       <div class="loader-logo">
-        <div class="loader-logo-icon"></div>
-        <div class="loader-brand">
-          <span class="loader-title">DOUGLAS MOURA</span>
-          <span id="loader-subtitle" class="loader-subtitle">Desenvolvedor Full Stack</span>
-        </div>
+        <div class="loader-logo-icon" aria-hidden="true"></div>
+        <span class="loader-title">Douglas Moura</span>
+        <span id="loader-subtitle" class="loader-subtitle">Desenvolvedor Full Stack</span>
       </div>
       <div class="loader-bar-container">
         <div class="loader-bar">
           <div id="loader-progress" class="loader-progress"></div>
-        </div>
-        <div class="loader-bar-labels">
-          <span id="loader-label" class="loader-label">PORTFOLIO INICIANDO</span>
-          <span id="loader-version" class="loader-version">v1.0.0</span>
         </div>
       </div>
     </div>
@@ -37,10 +30,12 @@
   <div id="main-content" class="main-content-hidden">
   <header class="header">
     <nav class="nav">
-      <a href="#" class="logo">Douglas Moura</a>
+      <a href="#" class="logo">Douglas <span>Moura</span></a>
       <ul class="nav-links">
         <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
-        <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="#projetos-entregues" data-i18n="nav.delivered">Entregues</a></li>
+        <li><a href="#sistemas" data-i18n="nav.systems">Sistemas</a></li>
         <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
         <li>
           <button class="lang-toggle" aria-label="Traduzir para inglês" title="English">
@@ -62,53 +57,106 @@
       <div class="hero-content">
         <span class="hero-badge" data-i18n="hero.badge">Desenvolvedor Full Stack</span>
         <h1 class="hero-title" data-i18n-html="hero.title">
-          Olá, sou <span class="highlight">Douglas Moura</span>
+          Douglas <span class="highlight">Moura</span>
         </h1>
         <p class="hero-description" data-i18n="hero.description">
-          Desenvolvedor focado em criar soluções robustas e escaláveis. 
-          Especialista em sistemas de Help Desk, CRM e aplicações web com PHP, MySQL e tecnologias modernas.
+          Desenvolvo sites e sistemas sob medida — Help Desk, CRM e painéis web.
+          Aberto a vagas, projetos freelance e implantação dos meus sistemas prontos.
         </p>
-        <div class="hero-cta">
-          <a href="#projetos" class="btn btn-primary" data-i18n="hero.ctaProjects">Ver Projetos</a>
-          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+        <div class="hero-cta hero-cta-multi">
+          <a href="mailto:douglas.hennrique@hotmail.com?subject=Oportunidade%20-%20Dev%20Full%20Stack" class="btn btn-primary" data-i18n="hero.ctaJob">Busco oportunidade</a>
+          <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="hero.ctaFreelance">Orçamento freelance</a>
+          <a href="#sistemas" class="btn btn-outline" data-i18n="hero.ctaSystems">Sistemas prontos</a>
         </div>
+        <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="hero-github-link">GitHub →</a>
       </div>
-      <div class="hero-visual">
-        <div class="code-block" data-i18n-html="hero.codeBlock">
-          <span class="code-line"><span class="code-keyword">const</span> dev = {</span>
-          <span class="code-line">  stack: [<span class="code-string">'PHP'</span>, <span class="code-string">'MySQL'</span>, <span class="code-string">'JavaScript'</span>],</span>
-          <span class="code-line">  focus: <span class="code-string">'Help Desk & CRM'</span>,</span>
-          <span class="code-line">  location: <span class="code-string">'Salvador, BA'</span></span>
-          <span class="code-line">};</span>
+      <aside class="hero-visual">
+        <div class="hero-panel">
+          <p class="hero-panel-label" data-i18n="hero.panel.label">Stack & foco</p>
+          <div class="hero-stack">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>JavaScript</span>
+            <span>Help Desk</span>
+            <span>CRM</span>
+          </div>
+          <dl class="hero-meta">
+            <div>
+              <dt data-i18n="hero.meta.focus">Foco</dt>
+              <dd data-i18n="hero.meta.focusValue">Sistemas web para operações</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.meta.location">Base</dt>
+              <dd data-i18n="hero.meta.locationValue">Salvador, BA · remoto</dd>
+            </div>
+          </dl>
         </div>
-      </div>
+      </aside>
     </section>
 
     <section id="sobre" class="about">
       <div class="container">
-        <h2 class="section-title" data-i18n="about.title">Sobre mim</h2>
+        <header class="section-head">
+          <span class="section-eyebrow" data-i18n="about.eyebrow">01 — Sobre</span>
+          <h2 class="section-title" data-i18n="about.title">Quem sou</h2>
+        </header>
         <p class="about-text" data-i18n="about.text">
-          Desenvolvedor com experiência em sistemas de gestão de chamados, CRM e Help Desk. 
-          Domínio em PHP nativo com arquitetura MVC, MySQL, autenticação segura, controle de acesso (ACL) 
-          e interfaces responsivas. Apaixonado por código limpo e soluções que fazem a diferença.
+          Desenvolvedor Full Stack em Salvador, BA (remoto). Experiência em Help Desk, CRM e sites institucionais
+          com projetos reais em produção. Busco vagas na área, freelances sob medida e parceiros para sistemas prontos.
         </p>
       </div>
     </section>
 
-    <section id="projetos" class="projects">
+    <section id="servicos" class="services">
       <div class="container">
-        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+        <header class="section-head">
+          <span class="section-eyebrow" data-i18n="services.eyebrow">02 — Serviços</span>
+          <h2 class="section-title" data-i18n="services.title">Como posso ajudar</h2>
+        </header>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-num">01</span>
+            <h3 data-i18n="services.job.title">Vagas & oportunidades</h3>
+            <p data-i18n="services.job.text">Contratação CLT ou PJ para desenvolvimento web, PHP, MySQL e sistemas internos.</p>
+            <a href="mailto:douglas.hennrique@hotmail.com?subject=Oportunidade%20-%20Dev%20Full%20Stack" class="service-link" data-i18n="services.job.cta">Enviar e-mail →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-num">02</span>
+            <h3 data-i18n="services.freelance.title">Freelance sob medida</h3>
+            <p data-i18n="services.freelance.text">Sites, painéis e sistemas feitos para a necessidade do seu negócio, do briefing à entrega no ar.</p>
+            <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="service-link" data-i18n="services.freelance.cta">Pedir orçamento →</a>
+          </article>
+          <article class="service-card">
+            <span class="service-num">03</span>
+            <h3 data-i18n="services.product.title">Sistemas prontos</h3>
+            <p data-i18n="services.product.text">Help Desk, CRM, agendamento e SaaS já desenvolvidos — implantação, personalização e suporte.</p>
+            <a href="#sistemas" class="service-link" data-i18n="services.product.cta">Ver sistemas →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos-entregues" class="projects">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-eyebrow" data-i18n="projects.delivered.eyebrow">03 — Entregues</span>
+          <h2 class="section-title" data-i18n="projects.delivered.title">Projetos no ar</h2>
+          <p class="section-subtitle" data-i18n="projects.delivered.subtitle">Sites e sistemas em produção — referência para vagas e freelances.</p>
+        </header>
         <div class="projects-grid">
           
           <article class="project-card">
+            <a href="https://ts.titaniumtelecom.com.br" target="_blank" rel="noopener" class="project-media">
+              <img src="assets/projects/titanium.jpg" alt="Preview do CRM Tsolutions — Titanium Telecom" loading="lazy" decoding="async" width="1440" height="900">
+            </a>
+            <div class="project-card-body">
             <div class="project-header">
-              <span class="project-icon">📋</span>
               <span class="project-tag">PHP • MVC • MySQL</span>
             </div>
             <h3 class="project-title" data-i18n="projects.tsolutions.title">Tsolutions - CRM Chamados</h3>
+            <p class="project-benefit" data-i18n="projects.tsolutions.benefit">Organiza chamados e equipe de suporte em um painel único.</p>
             <p class="project-description" data-i18n="projects.tsolutions.description">
-              Sistema de chamados (tickets) estilo CRM em PHP nativo com arquitetura MVC. 
-              Dashboard, CRUD completo, atribuição a agentes, comentários, anexos, filtros avançados e permissões por perfil.
+              CRM de tickets: dashboard, atribuição a agentes, comentários, anexos e permissões por perfil.
             </p>
             <ul class="project-features">
               <li data-i18n="projects.tsolutions.f1">Autenticação com rate limit e CSRF</li>
@@ -116,20 +164,25 @@
               <li data-i18n="projects.tsolutions.f3">Upload seguro de anexos</li>
               <li data-i18n="projects.tsolutions.f4">Prepared statements (anti-SQLi)</li>
             </ul>
-            <a href="https://github.com/douglasmouradev/Tsolutions" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
+            <div class="project-card-actions">
+              <a href="https://ts.titaniumtelecom.com.br" target="_blank" rel="noopener" class="project-link project-link-live" data-i18n="projects.viewLive">Ver online →</a>
+              <a href="https://github.com/douglasmouradev/Tsolutions" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">Ver no GitHub →</a>
+            </div>
+            </div>
           </article>
 
           <article class="project-card">
+            <a href="https://cea.controllit.com.br" target="_blank" rel="noopener" class="project-media">
+              <img src="assets/projects/controllit.jpg" alt="Preview do Controll IT Help Desk" loading="lazy" decoding="async" width="1440" height="900">
+            </a>
+            <div class="project-card-body">
             <div class="project-header">
-              <span class="project-icon">🎫</span>
               <span class="project-tag">PHP • Tailwind • Help Desk</span>
             </div>
             <h3 class="project-title" data-i18n="projects.controll.title">Controll IT Help Desk</h3>
+            <p class="project-benefit" data-i18n="projects.controll.benefit">Centraliza atendimentos e filas com perfis de acesso por função.</p>
             <p class="project-description" data-i18n="projects.controll.description">
-              Aplicação de CRM/Help Desk em PHP 8+, MySQL, Tailwind e Vanilla JS. 
-              Sessões PHP, ACL por perfis (superadmin, admin, suporte, gerente, usuário) e integração ViaCEP.
+              Help Desk com ACL, dashboard com filtros e integração ViaCEP.
             </p>
             <ul class="project-features">
               <li data-i18n="projects.controll.f1">Dashboard com filtros rápidos</li>
@@ -137,20 +190,25 @@
               <li data-i18n="projects.controll.f3">Preenchimento automático por CEP</li>
               <li data-i18n="projects.controll.f4">Interface visual TDESK</li>
             </ul>
-            <a href="https://github.com/douglasmouradev/controll-v2" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
+            <div class="project-card-actions">
+              <a href="https://cea.controllit.com.br" target="_blank" rel="noopener" class="project-link project-link-live" data-i18n="projects.viewLive">Ver online →</a>
+              <a href="https://github.com/douglasmouradev/controll-v2" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">Ver no GitHub →</a>
+            </div>
+            </div>
           </article>
 
           <article class="project-card">
+            <a href="https://tdesksolutions.com.br" target="_blank" rel="noopener" class="project-media">
+              <img src="assets/projects/tdesk-site.jpg" alt="Preview do site TDesk Solutions" loading="lazy" decoding="async" width="1440" height="900">
+            </a>
+            <div class="project-card-body">
             <div class="project-header">
-              <span class="project-icon">🌐</span>
               <span class="project-tag">HTML • CSS • JavaScript</span>
             </div>
             <h3 class="project-title" data-i18n="projects.sitetdesk.title">Site TDesk Solutions</h3>
+            <p class="project-benefit" data-i18n="projects.sitetdesk.benefit">Presença profissional online com foco em conversão e SEO.</p>
             <p class="project-description" data-i18n="projects.sitetdesk.description">
-              Site institucional do TDesk Solutions - sistema de gestão de chamados técnicos. 
-              Design moderno, responsivo, otimizado para SEO com seções Hero, Funcionalidades, Preços, Demo e Contato.
+              Site institucional responsivo com Hero, funcionalidades, preços, demo e contato.
             </p>
             <ul class="project-features">
               <li data-i18n="projects.sitetdesk.f1">Layout responsivo (mobile-first)</li>
@@ -158,88 +216,36 @@
               <li data-i18n="projects.sitetdesk.f3">Deploy: Vercel, Netlify, GitHub Pages</li>
               <li data-i18n="projects.sitetdesk.f4">Schema PostgreSQL de referência</li>
             </ul>
-            <a href="https://github.com/douglasmouradev/site-tdesk" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <span class="project-icon">🚀</span>
-              <span class="project-tag">PHP 8.5 • MySQL 9.4</span>
-            </div>
-            <h3 class="project-title" data-i18n="projects.apptdesk.title">TDesk Solutions (App)</h3>
-            <p class="project-description" data-i18n="projects.apptdesk.description">
-              Plataforma web completa para gestão de chamados em PHP 8.5 e MySQL 9.4+. 
-              Painel com indicadores em tempo real, gráficos interativos, trilha de auditoria e exportação de relatórios.
-            </p>
-            <ul class="project-features">
-              <li data-i18n="projects.apptdesk.f1">Autenticação com níveis (admin, suporte, cliente)</li>
-              <li data-i18n="projects.apptdesk.f2">Exportação Excel e PDF</li>
-              <li data-i18n="projects.apptdesk.f3">CSRF, rate limiting e validações</li>
-              <li data-i18n="projects.apptdesk.f4">Deploy automatizado para VPS</li>
-            </ul>
-            <a href="https://github.com/douglasmouradev/app-tdesk" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <span class="project-icon">💰</span>
-              <span class="project-tag">PHP 8.3+ • MySQL • Chart.js</span>
-            </div>
-            <h3 class="project-title" data-i18n="projects.granaflow.title">GranaFlow</h3>
-            <p class="project-description" data-i18n="projects.granaflow.description">
-              SaaS de controle financeiro pessoal: salário, receitas extras, custos fixos e gastos por categoria,
-              metas e orçamento, recorrências automáticas, gráficos e exportação CSV. Multiusuário com autenticação segura (CSRF, sessão, rate limit no login).
-            </p>
-            <ul class="project-features">
-              <li data-i18n="projects.granaflow.f1">Dashboard com gráficos e saldo em tempo real</li>
-              <li data-i18n="projects.granaflow.f2">Orçado vs real por categoria e metas mensais</li>
-              <li data-i18n="projects.granaflow.f3">PDO, front estático em assets (CSS/JS separados)</li>
-              <li data-i18n="projects.granaflow.f4">Deploy em VPS (Nginx, PHP-FPM, MariaDB)</li>
-            </ul>
             <div class="project-card-actions">
-              <a href="https://github.com/douglasmouradev/Grana-Flow" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-                Ver no GitHub →
-              </a>
-              <a href="https://granaflow.tdesksolutions.com.br" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewDemo">
-                Demo online →
-              </a>
+              <a href="https://tdesksolutions.com.br" target="_blank" rel="noopener" class="project-link project-link-live" data-i18n="projects.viewLive">Ver online →</a>
+              <a href="https://github.com/douglasmouradev/site-tdesk" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">Ver no GitHub →</a>
+            </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-header">
-              <span class="project-icon">📱</span>
-              <span class="project-tag">Kotlin • MVVM • Android</span>
-            </div>
-            <h3 class="project-title" data-i18n="projects.lanchonete.title">Lanchonete Android App</h3>
-            <p class="project-description" data-i18n="projects.lanchonete.description">
-              Aplicativo Android para controle de vendas e estoque de lanchonetes. 
-              Desenvolvido em Kotlin com arquitetura MVVM, Room e Firebase.
-            </p>
-            <ul class="project-features">
-              <li data-i18n="projects.lanchonete.f1">Vendas com carrinho e múltiplas formas de pagamento</li>
-              <li data-i18n="projects.lanchonete.f2">Controle de estoque com alertas</li>
-              <li data-i18n="projects.lanchonete.f3">Relatórios diários, semanais e mensais</li>
-              <li data-i18n="projects.lanchonete.f4">Material Design 3 e Navigation Component</li>
-            </ul>
-            <a href="https://github.com/douglasmouradev/lanchonete-android-app" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
-          </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="project-card">
+    <section id="sistemas" class="projects products-section">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-eyebrow" data-i18n="projects.systems.eyebrow">04 — Produtos</span>
+          <h2 class="section-title" data-i18n="projects.systems.title">Sistemas disponíveis</h2>
+          <p class="section-subtitle" data-i18n="projects.systems.subtitle">Prontos para implantação, personalização e suporte na sua empresa.</p>
+        </header>
+        <div class="projects-grid">
+
+          <article class="project-card project-card-product">
+            <div class="project-card-body">
             <div class="project-header">
-              <span class="project-icon">✂️</span>
               <span class="project-tag">PHP 8.2 • MySQL • PDO</span>
+              <span class="project-badge project-badge-product" data-i18n="projects.badgeProduct">Disponível</span>
             </div>
             <h3 class="project-title" data-i18n="projects.barbabook.title">BarbaBook</h3>
+            <p class="project-benefit" data-i18n="projects.barbabook.benefit">Agendamento online para barbearia e nail design em um só sistema.</p>
             <p class="project-description" data-i18n="projects.barbabook.description">
-              Sistema de agendamento para barbeiros e nail design, desenvolvido para TDesk Solutions. 
-              Página inicial com escolha entre Barbeiro ou Nails; cada módulo com agendamentos, serviços e profissionais.
+              Módulos Barbeiro e Nails com agendamentos, serviços, profissionais e painel admin.
             </p>
             <ul class="project-features">
               <li data-i18n="projects.barbabook.f1">Barbeiro: cortes, barba e serviços</li>
@@ -247,20 +253,23 @@
               <li data-i18n="projects.barbabook.f3">Admin com login e multibeneficiário</li>
               <li data-i18n="projects.barbabook.f4">PHP 8.2+, PDO e MySQL 8</li>
             </ul>
-            <a href="https://github.com/douglasmouradev/barbabook" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
+            <div class="project-card-actions">
+              <a href="https://github.com/douglasmouradev/barbabook" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">Ver no GitHub →</a>
+              <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20tenho%20interesse%20no%20BarbaBook." target="_blank" rel="noopener" class="project-link project-link-cta" data-i18n="projects.requestSystem">Quero para minha empresa →</a>
+            </div>
+            </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card-product">
+            <div class="project-card-body">
             <div class="project-header">
-              <span class="project-icon">💈</span>
               <span class="project-tag">PHP 8.3 • MySQL • SaaS</span>
+              <span class="project-badge project-badge-product" data-i18n="projects.badgeProduct">Disponível</span>
             </div>
             <h3 class="project-title" data-i18n="projects.cadeiralivre.title">CadeiraLivre</h3>
+            <p class="project-benefit" data-i18n="projects.cadeiralivre.benefit">SaaS multi-tenant para barbearias com agenda, planos e pagamentos.</p>
             <p class="project-description" data-i18n="projects.cadeiralivre.description">
-              SaaS de agendamento para barbearias: multi-tenant, painel administrativo, agenda da equipe,
-              agendamento público por slug, portal do cliente, relatórios, planos com limites, fila de e-mail e integração Stripe (webhook).
+              Agendamento por slug, portal do cliente, relatórios, Stripe e superadmin da plataforma.
             </p>
             <ul class="project-features">
               <li data-i18n="projects.cadeiralivre.f1">MVC próprio, CSRF, rate limit no login e PDO</li>
@@ -268,31 +277,74 @@
               <li data-i18n="projects.cadeiralivre.f3">Superadmin da plataforma e páginas LGPD</li>
               <li data-i18n="projects.cadeiralivre.f4">Front HTML/CSS/JS vanilla</li>
             </ul>
-            <a href="https://github.com/douglasmouradev/cadeiralivre" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">
-              Ver no GitHub →
-            </a>
+            <div class="project-card-actions">
+              <a href="https://github.com/douglasmouradev/cadeiralivre" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">Ver no GitHub →</a>
+              <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20tenho%20interesse%20no%20CadeiraLivre." target="_blank" rel="noopener" class="project-link project-link-cta" data-i18n="projects.requestSystem">Quero para minha empresa →</a>
+            </div>
+            </div>
           </article>
 
         </div>
       </div>
     </section>
 
+    <section id="outros-projetos" class="projects projects-alt">
+      <div class="container">
+        <header class="section-head">
+          <span class="section-eyebrow" data-i18n="projects.other.eyebrow">05 — GitHub</span>
+          <h2 class="section-title" data-i18n="projects.other.title">Outros projetos</h2>
+          <p class="section-subtitle" data-i18n="projects.other.subtitle">Repositórios abertos — referência técnica para vagas.</p>
+        </header>
+        <div class="projects-grid projects-grid--single">
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-icon">📱</span>
+              <span class="project-tag">Kotlin • MVVM • Android</span>
+            </div>
+            <h3 class="project-title" data-i18n="projects.lanchonete.title">Lanchonete Android App</h3>
+            <p class="project-benefit" data-i18n="projects.lanchonete.benefit">Vendas e estoque para lanchonetes no celular.</p>
+            <p class="project-description" data-i18n="projects.lanchonete.description">
+              App Android em Kotlin com MVVM, Room e Firebase.
+            </p>
+            <ul class="project-features">
+              <li data-i18n="projects.lanchonete.f1">Vendas com carrinho e múltiplas formas de pagamento</li>
+              <li data-i18n="projects.lanchonete.f2">Controle de estoque com alertas</li>
+              <li data-i18n="projects.lanchonete.f3">Relatórios diários, semanais e mensais</li>
+              <li data-i18n="projects.lanchonete.f4">Material Design 3 e Navigation Component</li>
+            </ul>
+            <a href="https://github.com/douglasmouradev/lanchonete-android-app" target="_blank" rel="noopener" class="project-link" data-i18n="projects.viewGitHub">Ver no GitHub →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contato" class="contact">
       <div class="container">
-        <h2 class="section-title" data-i18n="contact.title">Contato</h2>
-        <p class="contact-text" data-i18n="contact.text">Interessado em trabalhar junto? Entre em contato!</p>
+        <header class="section-head">
+          <span class="section-eyebrow" data-i18n="contact.eyebrow">06 — Contato</span>
+          <h2 class="section-title" data-i18n="contact.title">Vamos conversar</h2>
+          <p class="section-subtitle" data-i18n="contact.text">Escolha o assunto — respondo em até 24h.</p>
+        </header>
         <div class="contact-links">
-          <a href="mailto:douglas.hennrique@hotmail.com" class="contact-link">
-            <span class="contact-icon">✉️</span>
-            douglas.hennrique@hotmail.com
+          <a href="mailto:douglas.hennrique@hotmail.com?subject=Oportunidade%20-%20Dev%20Full%20Stack" class="contact-link">
+            <span class="contact-label" data-i18n="contact.job">Vagas & emprego</span>
+            <span class="contact-hint" data-i18n="contact.jobHint">E-mail profissional</span>
           </a>
-          <a href="https://wa.me/5571997087082" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-icon">📱</span>
-            (71) 99708-7082
+          <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-label" data-i18n="contact.freelance">Projeto freelance</span>
+            <span class="contact-hint" data-i18n="contact.freelanceHint">WhatsApp</span>
           </a>
-          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-icon">🐙</span>
-            GitHub
+          <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20tenho%20interesse%20nos%20seus%20sistemas%20prontos." target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-label" data-i18n="contact.product">Sistemas prontos</span>
+            <span class="contact-hint" data-i18n="contact.productHint">WhatsApp</span>
+          </a>
+          <a href="mailto:douglas.hennrique@hotmail.com" class="contact-link contact-link--wide">
+            <span class="contact-label">douglas.hennrique@hotmail.com</span>
+            <span class="contact-hint">(71) 99708-7082</span>
+          </a>
+          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="contact-link contact-link--wide">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-hint">@douglasmouradev</span>
           </a>
         </div>
       </div>
@@ -300,7 +352,7 @@
   </main>
 
   <footer class="footer">
-    <p data-i18n="footer.text">© 2025 Douglas Moura. Desenvolvido com dedicação em Salvador, BA.</p>
+    <p data-i18n="footer.text">© 2026 Douglas Moura. Desenvolvido com dedicação em Salvador, BA.</p>
   </footer>
   </div>
 
