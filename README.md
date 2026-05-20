@@ -32,6 +32,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 | **Tsolutions** | PHP · MVC · MySQL | [ts.titaniumtelecom.com.br](https://ts.titaniumtelecom.com.br) |
 | **Controll IT Help Desk** | PHP · Tailwind | [cea.controllit.com.br](https://cea.controllit.com.br) |
 | **Site TDesk Solutions** | HTML · CSS · JS | [tdesksolutions.com.br](https://tdesksolutions.com.br) |
+| **GranaFlow** | PHP · MySQL · SaaS | [granaflow.tdesksolutions.com.br](https://granaflow.tdesksolutions.com.br) |
 
 ## Sistemas disponíveis (SaaS / produtos)
 
