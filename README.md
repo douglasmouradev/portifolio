@@ -12,6 +12,7 @@ Portfólio profissional com os projetos de desenvolvimento.
 - **Lanchonete Android App** - App Android para gestão de vendas e estoque (Kotlin/MVVM)
 - **BarbaBook** - Sistema de agendamento para barbeiros e nail design (PHP/MySQL)
 - **CadeiraLivre** - SaaS multi-tenant de agendamento para barbearias (PHP 8.3, MySQL, MVC, Stripe, Docker) — [repositório](https://github.com/douglasmouradev/cadeiralivre)
+- **Clinix** - SaaS multi-tenant para clínicas médicas (PHP 8.2, MySQL, prontuário, fila, triagem e LGPD) — [repositório](https://github.com/douglasmouradev/clinix)
 
 ## Como visualizar
 
