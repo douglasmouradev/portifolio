@@ -1,22 +1,48 @@
-# Portfólio - Douglas Moura
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JS"/>
+  <img src="https://img.shields.io/badge/i18n-PT%2FEN-0ea5e9?style=flat-square" alt="i18n"/>
+</p>
 
-Portfólio profissional com os projetos de desenvolvimento.
+<h1 align="center">Portfólio — Douglas Moura</h1>
 
-## Projetos em destaque
+<p align="center">
+  <strong>Desenvolvedor Full Stack</strong> · Salvador, BA (remoto)<br/>
+  Sites e sistemas sob medida — Help Desk, CRM, SaaS e painéis web.
+</p>
 
-- **Tsolutions** - CRM de Chamados em PHP MVC
-- **Controll IT Help Desk** - Sistema de Help Desk em PHP
-- **Site TDesk Solutions** - Site institucional responsivo
-- **TDesk Solutions (App)** - Plataforma web de gestão de chamados em PHP 8.5
-- **GranaFlow** - SaaS de finanças pessoais (PHP/MySQL, gráficos, orçamento e recorrências) — [demo](https://granaflow.tdesksolutions.com.br)
-- **Lanchonete Android App** - App Android para gestão de vendas e estoque (Kotlin/MVVM)
-- **BarbaBook** - Sistema de agendamento para barbeiros e nail design (PHP/MySQL)
-- **CadeiraLivre** - SaaS multi-tenant de agendamento para barbearias (PHP 8.3, MySQL, MVC, Stripe, Docker) — [repositório](https://github.com/douglasmouradev/cadeiralivre)
-- **Clinix** - SaaS multi-tenant para clínicas médicas (PHP 8.2, MySQL, prontuário, fila, triagem e LGPD) — [repositório](https://github.com/douglasmouradev/clinix)
+<p align="center">
+  <a href="https://portifolio-douglas-moura.vercel.app"><strong>Ver online</strong></a> ·
+  <a href="https://github.com/douglasmouradev">GitHub</a> ·
+  <a href="https://www.linkedin.com/in/douglas-henrique-silva-moura">LinkedIn</a> ·
+  <a href="mailto:douglas.hennrique@hotmail.com?subject=Oportunidade%20-%20Dev%20Full%20Stack">E-mail</a>
+</p>
 
-## Como visualizar
+---
 
-Abra o arquivo `index.html` no navegador ou use um servidor local:
+## Sobre
+
+Portfólio profissional estático com projetos em produção, sistemas SaaS disponíveis para implantação e contato direto (vagas, freelance e produtos prontos).
+
+## Projetos em produção
+
+| Projeto | Stack | Demo |
+|---------|-------|------|
+| **Tsolutions** | PHP · MVC · MySQL | [ts.titaniumtelecom.com.br](https://ts.titaniumtelecom.com.br) |
+| **Controll IT Help Desk** | PHP · Tailwind | [cea.controllit.com.br](https://cea.controllit.com.br) |
+| **Site TDesk Solutions** | HTML · CSS · JS | [tdesksolutions.com.br](https://tdesksolutions.com.br) |
+
+## Sistemas disponíveis (SaaS / produtos)
+
+| Projeto | Repositório |
+|---------|-------------|
+| **CadeiraLivre** | [cadeiralivre](https://github.com/douglasmouradev/cadeiralivre) |
+| **Clinix** | [clinix](https://github.com/douglasmouradev/clinix) |
+| **BarbaBook** | [barbabook](https://github.com/douglasmouradev/barbabook) |
+| **Lanchonete Android** | [lanchonete-android-app](https://github.com/douglasmouradev/lanchonete-android-app) |
+
+## Como rodar localmente
 
 ```bash
 # Python
@@ -33,7 +59,20 @@ Acesse: http://localhost:8000
 
 ## Deploy
 
-O portfólio é estático e pode ser hospedado em:
-- GitHub Pages
-- Vercel
-- Netlify
+Hospedagem estática em **Vercel** (produção), **Netlify** ou **GitHub Pages**.
+
+## Estrutura
+
+```
+portifolio/
+├── index.html
+├── styles.css
+├── script.js
+├── translations.js   # PT / EN
+├── assets/projects/  # screenshots
+└── scripts/          # captura de previews
+```
+
+## Autor
+
+**Douglas Moura** — [portifolio-douglas-moura.vercel.app](https://portifolio-douglas-moura.vercel.app)
