@@ -654,6 +654,10 @@ a {
   background: linear-gradient(145deg, #eef5f8 0%, #dbeafe 55%, #ecfdf5 100%);
 }
 
+.project-media--cadeiralivre {
+  background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 45%, #f5efe8 100%);
+}
+
 .project-media::after {
   content: '';
   position: absolute;

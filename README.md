@@ -40,7 +40,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 | **Clinix** | PHP · MySQL · SaaS | [Demo](https://clinix.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/clinix) |
 | **Desk Food** | PHP · MySQL · PIX | [GitHub](https://github.com/douglasmouradev/deskfood) |
 | **Rezult** | PHP · MySQL · SaaS | [GitHub](https://github.com/douglasmouradev/rezult) |
-| **CadeiraLivre** | PHP · MySQL · SaaS | [GitHub](https://github.com/douglasmouradev/cadeiralivre) |
+| **CadeiraLivre** | PHP 8.3 · MySQL · Stripe · Docker | [Demo](https://cadeiralivre.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/cadeiralivre) |
 | **Lanchonete Android** | Kotlin · Android | [GitHub](https://github.com/douglasmouradev/lanchonete-android-app) |
 
 ## Como rodar localmente
