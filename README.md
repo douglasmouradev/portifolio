@@ -40,7 +40,6 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 | **Desk Food** | [deskfood](https://github.com/douglasmouradev/deskfood) |
 | **CadeiraLivre** | [cadeiralivre](https://github.com/douglasmouradev/cadeiralivre) |
 | **Clinix** | [clinix](https://github.com/douglasmouradev/clinix) |
-| **BarbaBook** | [barbabook](https://github.com/douglasmouradev/barbabook) |
 | **Lanchonete Android** | [lanchonete-android-app](https://github.com/douglasmouradev/lanchonete-android-app) |
 
 ## Como rodar localmente
