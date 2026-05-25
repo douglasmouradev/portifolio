@@ -32,6 +32,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 | **Tsolutions** | PHP · MVC · MySQL | [ts.titaniumtelecom.com.br](https://ts.titaniumtelecom.com.br) |
 | **Controll IT Help Desk** | PHP · Tailwind | [cea.controllit.com.br](https://cea.controllit.com.br) |
 | **Site TDesk Solutions** | HTML · CSS · JS | [tdesksolutions.com.br](https://tdesksolutions.com.br) |
+| **Rezult** | PHP 8.3 · MySQL · SaaS | [rezult.tdesksolutions.com.br](https://rezult.tdesksolutions.com.br) |
 
 ## Sistemas disponíveis (SaaS / produtos)
 
@@ -39,7 +40,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 |---------|-------|-------------------|
 | **Clinix** | PHP · MySQL · SaaS | [Demo](https://clinix.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/clinix) |
 | **Desk Food** | PHP · MySQL · PIX | [GitHub](https://github.com/douglasmouradev/deskfood) |
-| **Rezult** | PHP · MySQL · SaaS | [GitHub](https://github.com/douglasmouradev/rezult) |
+| **Rezult** | PHP 8.3 · MySQL · SaaS | [Demo](https://rezult.tdesksolutions.com.br/login) · [GitHub](https://github.com/douglasmouradev/rezult) |
 | **CadeiraLivre** | PHP 8.3 · MySQL · Stripe · Docker | [Demo](https://cadeiralivre.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/cadeiralivre) |
 | **Lanchonete Android** | Kotlin · Android | [GitHub](https://github.com/douglasmouradev/lanchonete-android-app) |
 
