@@ -632,6 +632,20 @@ a {
   transition: transform 0.45s var(--ease);
 }
 
+.project-media--logo {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(145deg, #fff7ed 0%, #ffedd5 100%);
+}
+
+.project-media--logo img {
+  object-fit: contain;
+  padding: 2rem;
+}
+
+.project-media--logo::after {
+  display: none;
+}
+
 .project-media::after {
   content: '';
   position: absolute;
