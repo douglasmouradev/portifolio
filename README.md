@@ -38,6 +38,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 | Projeto | Repositório |
 |---------|-------------|
 | **Desk Food** | [deskfood](https://github.com/douglasmouradev/deskfood) |
+| **Rezult** | [rezult](https://github.com/douglasmouradev/rezult) |
 | **CadeiraLivre** | [cadeiralivre](https://github.com/douglasmouradev/cadeiralivre) |
 | **Clinix** | [clinix](https://github.com/douglasmouradev/clinix) |
 | **Lanchonete Android** | [lanchonete-android-app](https://github.com/douglasmouradev/lanchonete-android-app) |
