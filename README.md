@@ -35,13 +35,13 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 
 ## Sistemas disponíveis (SaaS / produtos)
 
-| Projeto | Repositório |
-|---------|-------------|
-| **Desk Food** | [deskfood](https://github.com/douglasmouradev/deskfood) |
-| **Rezult** | [rezult](https://github.com/douglasmouradev/rezult) |
-| **CadeiraLivre** | [cadeiralivre](https://github.com/douglasmouradev/cadeiralivre) |
-| **Clinix** | [clinix](https://github.com/douglasmouradev/clinix) |
-| **Lanchonete Android** | [lanchonete-android-app](https://github.com/douglasmouradev/lanchonete-android-app) |
+| Projeto | Stack | Demo / Repositório |
+|---------|-------|-------------------|
+| **Clinix** | PHP · MySQL · SaaS | [Demo](https://clinix.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/clinix) |
+| **Desk Food** | PHP · MySQL · PIX | [GitHub](https://github.com/douglasmouradev/deskfood) |
+| **Rezult** | PHP · MySQL · SaaS | [GitHub](https://github.com/douglasmouradev/rezult) |
+| **CadeiraLivre** | PHP · MySQL · SaaS | [GitHub](https://github.com/douglasmouradev/cadeiralivre) |
+| **Lanchonete Android** | Kotlin · Android | [GitHub](https://github.com/douglasmouradev/lanchonete-android-app) |
 
 ## Como rodar localmente
 
