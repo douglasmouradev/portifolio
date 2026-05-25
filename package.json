@@ -1,0 +1,22 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "Portfólio profissional com os projetos de desenvolvimento.",
+  "main": "loader.js",
+  "scripts": {
+    "screenshots": "node scripts/capture-screenshots.mjs"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasmouradev/portifolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/douglasmouradev/portifolio/issues"
+  },
+  "homepage": "https://github.com/douglasmouradev/portifolio#readme"
+}
