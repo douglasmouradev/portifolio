@@ -646,6 +646,10 @@ a {
   display: none;
 }
 
+.project-media--rezult {
+  background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 50%, #fff7ed 100%);
+}
+
 .project-media::after {
   content: '';
   position: absolute;
