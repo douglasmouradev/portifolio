@@ -2,6 +2,11 @@
 const LANG_KEY = 'portfolio-lang';
 let currentLang = localStorage.getItem(LANG_KEY) || 'pt';
 
+function setMetaContent(selector, content) {
+  const el = document.querySelector(selector);
+  if (el && content) el.setAttribute('content', content);
+}
+
 function applyTranslations(lang) {
   const t = translations[lang];
   if (!t) return;
@@ -18,8 +23,29 @@ function applyTranslations(lang) {
     }
   });
 
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    if (t[key]) el.setAttribute('aria-label', t[key]);
+  });
+
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-  document.title = lang === 'pt' ? 'Douglas Moura | Portfólio' : 'Douglas Moura | Portfolio';
+
+  if (t['meta.title']) document.title = t['meta.title'];
+  if (t['meta.description']) {
+    setMetaContent('meta[name="description"]', t['meta.description']);
+    setMetaContent('meta[property="og:description"]', t['meta.description']);
+    setMetaContent('meta[name="twitter:description"]', t['meta.description']);
+  }
+  if (t['meta.ogTitle']) {
+    setMetaContent('meta[property="og:title"]', t['meta.ogTitle']);
+    setMetaContent('meta[name="twitter:title"]', t['meta.ogTitle']);
+  }
+  if (t['meta.ogTitle']) {
+    document.querySelector('meta[property="og:locale"]')?.setAttribute(
+      'content',
+      lang === 'pt' ? 'pt_BR' : 'en_US'
+    );
+  }
 
   const langToggle = document.querySelector('.lang-toggle');
   if (langToggle && t['lang.aria']) {
@@ -27,12 +53,7 @@ function applyTranslations(lang) {
     langToggle.setAttribute('title', t['lang.title']);
   }
 
-  const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) {
-    metaDesc.content = lang === 'pt'
-      ? 'Portfólio de Douglas Moura - Desenvolvedor Full Stack'
-      : 'Douglas Moura Portfolio - Full Stack Developer';
-  }
+  updateMenuToggleAria();
 }
 
 function toggleLanguage() {
@@ -42,28 +63,58 @@ function toggleLanguage() {
 }
 
 document.querySelector('.lang-toggle')?.addEventListener('click', toggleLanguage);
-
-// Aplicar idioma salvo ao carregar (script está no final do body, DOM já está pronto)
 applyTranslations(currentLang);
 
-// ===== Menu mobile toggle =====
+// ===== Menu mobile =====
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+
+function updateMenuToggleAria() {
+  if (!menuToggle) return;
+  const t = translations[currentLang];
+  const isOpen = navLinks?.classList.contains('active');
+  menuToggle.setAttribute('aria-expanded', String(!!isOpen));
+  if (t) {
+    menuToggle.setAttribute('aria-label', isOpen ? t['menu.close'] : t['menu.open']);
+  }
+}
 
 menuToggle?.addEventListener('click', () => {
   navLinks?.classList.toggle('active');
   menuToggle?.classList.toggle('active');
+  updateMenuToggleAria();
 });
 
-// Fechar menu ao clicar em um link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks?.classList.remove('active');
     menuToggle?.classList.remove('active');
+    updateMenuToggleAria();
   });
 });
 
-// Scroll reveal animation
+// ===== Navegação ativa ao rolar =====
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = [...document.querySelectorAll('main section[id]')];
+
+function updateActiveNav() {
+  if (!sections.length) return;
+  const offset = 140;
+  let currentId = sections[0].id;
+
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - offset) {
+      currentId = section.id;
+    }
+  });
+
+  navAnchors.forEach(anchor => {
+    const targetId = anchor.getAttribute('href')?.slice(1);
+    anchor.classList.toggle('is-active', targetId === currentId);
+  });
+}
+
+// ===== Scroll reveal =====
 const revealElements = document.querySelectorAll('.section-head, .about-text, .service-card, .project-card, .project-media, .contact-links, .hero-panel');
 
 const revealOnScroll = () => {
@@ -71,26 +122,21 @@ const revealOnScroll = () => {
   const revealPoint = 100;
 
   revealElements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - revealPoint) {
+    if (el.getBoundingClientRect().top < windowHeight - revealPoint) {
       el.classList.add('visible');
     }
   });
 };
 
-// Adicionar classe reveal aos elementos
-revealElements.forEach(el => {
-  el.classList.add('reveal');
-});
+revealElements.forEach(el => el.classList.add('reveal'));
 
-// Executar na carga e no scroll
-window.addEventListener('load', revealOnScroll);
-window.addEventListener('scroll', revealOnScroll);
-
-// Header scroll effect - adicionar sombra ao rolar
 const header = document.querySelector('.header');
 
-const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
-window.addEventListener('scroll', updateHeader);
-window.addEventListener('load', updateHeader);
+const onScroll = () => {
+  header?.classList.toggle('is-scrolled', window.scrollY > 24);
+  revealOnScroll();
+  updateActiveNav();
+};
+
+window.addEventListener('load', onScroll);
+window.addEventListener('scroll', onScroll, { passive: true });

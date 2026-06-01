@@ -4,13 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Douglas Moura — Dev Full Stack remoto. Criação de sites, sistemas web, Help Desk, CRM e SaaS do briefing à publicação.">
-  <title>Douglas Moura | Portfólio</title>
+  <meta name="theme-color" content="#11100e">
+  <link rel="canonical" href="https://portifolio-douglas-moura.vercel.app/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portifolio-douglas-moura.vercel.app/">
+  <meta property="og:title" content="Douglas Moura · Dev Full Stack">
+  <meta property="og:description" content="Douglas Moura — Dev Full Stack remoto. Criação de sites, sistemas web, Help Desk, CRM e SaaS do briefing à publicação.">
+  <meta property="og:image" content="https://portifolio-douglas-moura.vercel.app/portfolio-banner.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Douglas Moura · Dev Full Stack">
+  <meta name="twitter:description" content="Douglas Moura — Dev Full Stack remoto. Criação de sites, sistemas web, Help Desk, CRM e SaaS do briefing à publicação.">
+  <meta name="twitter:image" content="https://portifolio-douglas-moura.vercel.app/portfolio-banner.png">
+  <title>Douglas Moura · Dev Full Stack · Sites & Sistemas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Douglas Moura",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://portifolio-douglas-moura.vercel.app/",
+    "sameAs": [
+      "https://github.com/douglasmouradev",
+      "https://www.linkedin.com/in/douglas-henrique-silva-moura"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#conteudo" class="skip-link" data-i18n="a11y.skip">Pular para o conteúdo</a>
   <div id="loader" class="loader-overlay">
     <canvas id="matrix-canvas" hidden></canvas>
     <div class="loader-content">
@@ -29,22 +56,21 @@
 
   <div id="main-content" class="main-content-hidden">
   <header class="header">
-    <nav class="nav">
+    <nav class="nav" data-i18n-aria="menu.ariaLabel" aria-label="Menu principal">
       <a href="#" class="logo">Douglas <span>Moura</span></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#sobre" data-i18n="nav.about">Biografia</a></li>
         <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
         <li><a href="#projetos-entregues" data-i18n="nav.delivered">Portfólio</a></li>
         <li><a href="#sistemas" data-i18n="nav.systems">Sistemas</a></li>
         <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
         <li>
-          <button class="lang-toggle" aria-label="Traduzir para inglês" title="English">
-            <span class="lang-icon">🌐</span>
+          <button type="button" class="lang-toggle" aria-label="Traduzir para inglês" title="English">
             <span class="lang-label" data-i18n="nav.lang">EN</span>
           </button>
         </li>
       </ul>
-      <button class="menu-toggle" aria-label="Abrir menu">
+      <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
         <span></span>
         <span></span>
@@ -52,7 +78,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section class="hero">
       <div class="hero-content">
         <span class="hero-badge" data-i18n="hero.badge">Full Stack · PHP & sistemas web</span>
@@ -62,13 +88,21 @@
         <p class="hero-description" data-i18n="hero.description">
           Sites e sistemas do briefing à publicação. Vagas, criação de sites, freelance e produtos prontos para sua empresa.
         </p>
+        <p class="hero-proof" data-i18n="hero.proof">8+ projetos em produção · Help Desk, CRM e sites institucionais</p>
         <div class="hero-cta hero-cta-multi">
           <a href="mailto:douglas.hennrique@hotmail.com?subject=Oportunidade%20-%20Dev%20Full%20Stack" class="btn btn-primary" data-i18n="hero.ctaJob">Busco oportunidade</a>
           <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site." target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="hero.ctaSites">Orçamento de site</a>
           <a href="https://wa.me/5571997087082?text=Ol%C3%A1%20Douglas%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20para%20um%20projeto%20sob%20medida." target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero.ctaFreelance">Orçamento freelance</a>
           <a href="#sistemas" class="btn btn-outline" data-i18n="hero.ctaSystems">Sistemas prontos</a>
         </div>
-        <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="hero-github-link">GitHub →</a>
+        <div class="hero-social">
+          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+            <span data-i18n="hero.social.github">GitHub</span> →
+          </a>
+          <a href="https://www.linkedin.com/in/douglas-henrique-silva-moura" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+            <span data-i18n="hero.social.linkedin">LinkedIn</span> →
+          </a>
+        </div>
       </div>
       <aside class="hero-visual">
         <div class="hero-panel">
@@ -419,7 +453,11 @@
             <span class="contact-label">douglas.hennrique@hotmail.com</span>
             <span class="contact-hint">(71) 99708-7082</span>
           </a>
-          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener" class="contact-link contact-link--wide">
+          <a href="https://www.linkedin.com/in/douglas-henrique-silva-moura" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--wide">
+            <span class="contact-label" data-i18n="contact.linkedin">LinkedIn</span>
+            <span class="contact-hint" data-i18n="contact.linkedinHint">Perfil profissional</span>
+          </a>
+          <a href="https://github.com/douglasmouradev" target="_blank" rel="noopener noreferrer" class="contact-link contact-link--wide">
             <span class="contact-label">GitHub</span>
             <span class="contact-hint">@douglasmouradev</span>
           </a>
