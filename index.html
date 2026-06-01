@@ -103,6 +103,16 @@
             <span data-i18n="hero.social.linkedin">LinkedIn</span> →
           </a>
         </div>
+        <div class="hero-github-stats" id="hero-github-stats" hidden aria-live="polite">
+          <div class="hero-github-stat">
+            <span class="hero-github-stat-value" id="github-repos-count">—</span>
+            <span class="hero-github-stat-label" data-i18n="hero.github.repos">repositórios públicos</span>
+          </div>
+          <div class="hero-github-stat" id="github-contrib-stat" hidden>
+            <span class="hero-github-stat-value" id="github-contrib-count">—</span>
+            <span class="hero-github-stat-label" data-i18n="hero.github.contributions">contribuições (12 meses)</span>
+          </div>
+        </div>
       </div>
       <aside class="hero-visual">
         <div class="hero-panel">
@@ -474,5 +484,10 @@
   <script src="translations.js"></script>
   <script src="loader.js"></script>
   <script src="script.js"></script>
+  <script src="github-stats.js" defer></script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

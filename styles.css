@@ -423,6 +423,42 @@ a {
   border-color: var(--accent);
 }
 
+.hero-github-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.hero-github-stats.is-loaded {
+  opacity: 1;
+}
+
+.hero-github-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-github-stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.hero-github-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

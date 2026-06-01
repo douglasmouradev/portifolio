@@ -63,6 +63,10 @@ Acesse: http://localhost:8000
 
 Hospedagem estática em **Vercel** (produção), **Netlify** ou **GitHub Pages**.
 
+### Vercel Analytics
+
+O site inclui o script de **Vercel Web Analytics**. No painel do projeto: **Analytics → Enable** para ver visitas, páginas e origens do tráfego após o deploy.
+
 ## Estrutura
 
 ```
@@ -70,6 +74,7 @@ portifolio/
 ├── index.html
 ├── styles.css
 ├── script.js
+├── github-stats.js   # contadores GitHub no hero
 ├── translations.js   # PT / EN
 ├── assets/projects/  # screenshots
 └── scripts/          # captura de previews
