@@ -8,8 +8,8 @@
 <h1 align="center">Portfólio — Douglas Moura</h1>
 
 <p align="center">
-  <strong>Desenvolvedor Full Stack</strong> · Salvador, BA (remoto)<br/>
-  Sites e sistemas sob medida — Help Desk, CRM, SaaS e painéis web.
+  <strong>Desenvolvedor Full Stack</strong> · remoto<br/>
+  Criação de sites e sistemas sob medida — Help Desk, CRM, SaaS e painéis web.
 </p>
 
 <p align="center">
