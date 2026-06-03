@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Titanium Lunch">
+  <rect width="512" height="512" rx="48" fill="#0f2744"/>
+  <circle cx="256" cy="200" r="72" fill="#1e6fff" opacity="0.9"/>
+  <path d="M176 320h160c0 44-36 80-80 80s-80-36-80-80z" fill="#e8eef7"/>
+  <text x="256" y="430" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="700" fill="#ffffff">Lunch</text>
+</svg>

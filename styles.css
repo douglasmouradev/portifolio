@@ -731,6 +731,10 @@ a {
   display: none;
 }
 
+.project-media--lunch {
+  background: linear-gradient(145deg, #0f2744 0%, #1a3a5c 100%);
+}
+
 .project-media--rezult {
   background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 50%, #fff7ed 100%);
 }
