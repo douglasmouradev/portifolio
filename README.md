@@ -40,6 +40,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 
 | Projeto | Stack | Demo / Repositório |
 |---------|-------|-------------------|
+| **LojaHub** | Node.js · React · MySQL · Electron | [GitHub](https://github.com/douglasmouradev/lojahub) |
 | **Clinix** | PHP · MySQL · SaaS | [Demo](https://clinix.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/clinix) |
 | **Desk Food** | PHP · MySQL · PIX | [GitHub](https://github.com/douglasmouradev/deskfood) |
 | **Rezult** | PHP 8.3 · MySQL · SaaS | [Demo](https://rezult.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/rezult) |

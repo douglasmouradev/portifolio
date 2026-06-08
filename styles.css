@@ -739,6 +739,10 @@ a {
   background: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 50%, #fff7ed 100%);
 }
 
+.project-media--lojahub {
+  background: linear-gradient(145deg, #f0fdfa 0%, #ccfbf1 45%, #ecfdf5 100%);
+}
+
 .project-media--clinix {
   background: linear-gradient(145deg, #eef5f8 0%, #dbeafe 55%, #ecfdf5 100%);
 }
