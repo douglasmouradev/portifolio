@@ -9,7 +9,7 @@ const outDir = path.join(__dirname, '..', 'assets', 'projects');
 const targets = [
   { file: 'titanium.jpg', url: 'https://ts.titaniumtelecom.com.br', wait: 2500 },
   { file: 'controllit.jpg', url: 'https://cea.controllit.com.br', wait: 2500 },
-  { file: 'tdesk-site.jpg', url: 'https://tdesksolutions.com.br', wait: 2500 },
+  { file: 'tdesk-site.jpg', url: 'https://tdesksolutions.com.br', wait: 1500, dismissIntro: true },
 ];
 
 await mkdir(outDir, { recursive: true });
@@ -22,10 +22,19 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 
-for (const { file, url, wait } of targets) {
+for (const { file, url, wait, dismissIntro } of targets) {
   try {
     console.log(`Capturing ${url}...`);
     await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+    if (dismissIntro) {
+      const enterBtn = page
+        .getByRole('button', { name: /Entrar no site/i })
+        .or(page.getByRole('link', { name: /Entrar no site/i }));
+      if (await enterBtn.count()) {
+        await enterBtn.first().click();
+        await page.waitForTimeout(800);
+      }
+    }
     await page.waitForTimeout(wait);
     await page.screenshot({
       path: path.join(outDir, file),
