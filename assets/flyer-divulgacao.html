@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080">
+  <title>Flyer — Douglas Moura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0908;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      padding: 2rem;
+    }
+
+    .flyer {
+      width: 1080px;
+      height: 1350px;
+      background: #11100e;
+      color: #f3ece2;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 72px 64px 64px;
+      border: 1px solid rgba(243, 236, 226, 0.1);
+    }
+
+    .flyer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 100% 0%, rgba(212, 160, 84, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 0% 100%, rgba(212, 160, 84, 0.06), transparent 50%);
+      pointer-events: none;
+    }
+
+    .flyer::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 64px; right: 64px;
+      height: 3px;
+      background: linear-gradient(90deg, #d4a054, transparent);
+    }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 22px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #d4a054;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 88px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    h1 span { color: #d4a054; }
+
+    .role {
+      font-size: 32px;
+      color: #b8b0a4;
+      font-weight: 500;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .headline {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 52px;
+      font-weight: 500;
+      line-height: 1.2;
+      max-width: 900px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    .service {
+      background: rgba(26, 24, 21, 0.9);
+      border: 1px solid rgba(243, 236, 226, 0.1);
+      border-radius: 12px;
+      padding: 22px 24px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #f3ece2;
+    }
+
+    .service small {
+      display: block;
+      font-size: 17px;
+      font-weight: 400;
+      color: #7a746a;
+      margin-top: 6px;
+    }
+
+    .proof {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 20px;
+      color: #d4a054;
+      letter-spacing: 0.04em;
+      margin-bottom: auto;
+      position: relative;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(243, 236, 226, 0.1);
+      position: relative;
+    }
+
+    .cta-block strong {
+      display: block;
+      font-size: 28px;
+      color: #f3ece2;
+      margin-bottom: 8px;
+    }
+
+    .cta-block p {
+      font-size: 22px;
+      color: #b8b0a4;
+      line-height: 1.5;
+    }
+
+    .cta-block .url {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 20px;
+      color: #d4a054;
+      margin-top: 12px;
+    }
+
+    .qr-placeholder {
+      width: 140px;
+      height: 140px;
+      background: #f3ece2;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #11100e;
+      text-align: center;
+      padding: 8px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .hint {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: #7a746a;
+      font-family: system-ui, sans-serif;
+    }
+
+    @media print {
+      body { background: none; padding: 0; }
+      .hint { display: none; }
+      .flyer { border: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="flyer" id="flyer">
+    <p class="eyebrow">Dev Full Stack · Remoto</p>
+    <h1>Douglas <span>Moura</span></h1>
+    <p class="role">Sites & sistemas web · PHP · MySQL · JavaScript</p>
+    <p class="headline">Do briefing à publicação</p>
+
+    <div class="services">
+      <div class="service">
+        Criação de sites
+        <small>Institucionais e landing pages</small>
+      </div>
+      <div class="service">
+        Sistemas sob medida
+        <small>Help Desk, CRM e painéis</small>
+      </div>
+      <div class="service">
+        Freelance
+        <small>Do zero à entrega no ar</small>
+      </div>
+      <div class="service">
+        SaaS prontos
+        <small>Implantação e personalização</small>
+      </div>
+    </div>
+
+    <p class="proof">10+ projetos em produção · não mockup, não slide</p>
+
+    <footer class="footer">
+      <div class="cta-block">
+        <strong>Peça seu orçamento</strong>
+        <p>WhatsApp (71) 99708-7082<br>douglas.hennrique@hotmail.com</p>
+        <p class="url">portifolio-douglas-moura.vercel.app</p>
+      </div>
+      <div class="qr-placeholder" aria-hidden="true">
+        Acesse o<br>portfólio<br>online
+      </div>
+    </footer>
+  </article>
+
+  <p class="hint">1080×1350 px · Abra, capture a tela ou imprima em PDF (Ctrl+P)</p>
+</body>
+</html>

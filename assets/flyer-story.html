@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080">
+  <title>Story — Douglas Moura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0908;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      padding: 2rem;
+    }
+
+    .story {
+      width: 1080px;
+      height: 1920px;
+      background: #11100e;
+      color: #f3ece2;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 120px 72px 180px;
+      border: 1px solid rgba(243, 236, 226, 0.1);
+    }
+
+    .story::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 45% at 50% 0%, rgba(212, 160, 84, 0.14), transparent 60%),
+        radial-gradient(ellipse 70% 35% at 50% 100%, rgba(212, 160, 84, 0.08), transparent 55%);
+      pointer-events: none;
+    }
+
+    .story::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 72px; right: 72px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #d4a054, transparent);
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .top { text-align: center; }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 24px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #d4a054;
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 96px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    h1 span { color: #d4a054; }
+
+    .role {
+      font-size: 30px;
+      color: #b8b0a4;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .middle {
+      text-align: center;
+      padding: 48px 0;
+    }
+
+    .headline {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 48px;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .service {
+      background: rgba(26, 24, 21, 0.92);
+      border: 1px solid rgba(243, 236, 226, 0.1);
+      border-radius: 14px;
+      padding: 26px 32px;
+      font-size: 28px;
+      font-weight: 600;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .service small {
+      font-size: 20px;
+      font-weight: 400;
+      color: #7a746a;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .service-arrow {
+      font-family: 'IBM Plex Mono', monospace;
+      color: #d4a054;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .proof {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 22px;
+      color: #d4a054;
+      letter-spacing: 0.04em;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .bottom {
+      text-align: center;
+      padding-top: 32px;
+      border-top: 1px solid rgba(243, 236, 226, 0.1);
+    }
+
+    .cta-pill {
+      display: inline-block;
+      background: #d4a054;
+      color: #1a1510;
+      font-size: 30px;
+      font-weight: 700;
+      padding: 22px 48px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+
+    .contact {
+      font-size: 26px;
+      color: #b8b0a4;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .contact strong {
+      color: #f3ece2;
+      font-size: 32px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .url {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 24px;
+      color: #d4a054;
+      margin-bottom: 32px;
+    }
+
+    .swipe {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a746a;
+    }
+
+    .swipe::before {
+      content: '↑ ';
+      color: #d4a054;
+    }
+
+    .hint {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: #7a746a;
+      font-family: system-ui, sans-serif;
+    }
+
+    @media print {
+      body { background: none; padding: 0; }
+      .hint { display: none; }
+      .story { border: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="story" id="story">
+    <div class="content">
+      <header class="top">
+        <p class="eyebrow">Dev Full Stack · Remoto</p>
+        <h1>Douglas <span>Moura</span></h1>
+        <p class="role">Sites & sistemas web<br>PHP · MySQL · JavaScript</p>
+      </header>
+
+      <section class="middle">
+        <p class="headline">Do briefing à publicação</p>
+        <div class="services">
+          <div class="service">
+            <div>
+              Criação de sites
+              <small>Institucionais e landing pages</small>
+            </div>
+            <span class="service-arrow">→</span>
+          </div>
+          <div class="service">
+            <div>
+              Sistemas sob medida
+              <small>Help Desk, CRM e painéis</small>
+            </div>
+            <span class="service-arrow">→</span>
+          </div>
+          <div class="service">
+            <div>
+              Freelance
+              <small>Do zero à entrega no ar</small>
+            </div>
+            <span class="service-arrow">→</span>
+          </div>
+          <div class="service">
+            <div>
+              SaaS prontos
+              <small>Implantação e personalização</small>
+            </div>
+            <span class="service-arrow">→</span>
+          </div>
+        </div>
+        <p class="proof">10+ projetos em produção</p>
+      </section>
+
+      <footer class="bottom">
+        <div class="cta-pill">Peça seu orçamento</div>
+        <p class="contact">
+          <strong>WhatsApp (71) 99708-7082</strong>
+          douglas.hennrique@hotmail.com
+        </p>
+        <p class="url">portifolio-douglas-moura.vercel.app</p>
+        <p class="swipe">Link na bio</p>
+      </footer>
+    </div>
+  </article>
+
+  <p class="hint">1080×1920 px · Story Instagram / WhatsApp · Capture a tela ou Ctrl+P</p>
+</body>
+</html>
