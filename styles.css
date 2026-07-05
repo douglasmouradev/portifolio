@@ -751,6 +751,14 @@ a {
   background: linear-gradient(145deg, #eef5f8 0%, #dbeafe 55%, #ecfdf5 100%);
 }
 
+.project-media--techcell {
+  background: linear-gradient(145deg, #fff7ed 0%, #ffedd5 45%, #1a1a1a 100%);
+}
+
+.project-media--techcell img {
+  padding: 2.5rem;
+}
+
 .project-media--cadeiralivre {
   background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 45%, #f5efe8 100%);
 }

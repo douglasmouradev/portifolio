@@ -34,6 +34,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 | **Site TDesk Solutions** | HTML · CSS · JS | [tdesksolutions.com.br](https://tdesksolutions.com.br) |
 | **Sisal EcoLab** | HTML · CSS · JS · Vercel | [ecolab-sisal.vercel.app](https://ecolab-sisal.vercel.app) |
 | **Titanium Lunch** | PHP 8.3 · MySQL · Quiosque | [lunch.tdesksolutions.com.br](https://lunch.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/lunch) |
+| **Tech Cell** | PHP 8.2 · MySQL · SaaS | [techcell.tdesksolutions.com.br](https://techcell.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/techcell) |
 | **Rezult** | PHP 8.3 · MySQL · SaaS | [rezult.tdesksolutions.com.br](https://rezult.tdesksolutions.com.br) |
 
 ## Sistemas disponíveis (SaaS / produtos)
@@ -42,6 +43,7 @@ Portfólio profissional estático com projetos em produção, sistemas SaaS disp
 |---------|-------|-------------------|
 | **LojaHub** | Node.js · React · MySQL · Electron | [GitHub](https://github.com/douglasmouradev/lojahub) |
 | **Clinix** | PHP · MySQL · SaaS | [Demo](https://clinix.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/clinix) |
+| **Tech Cell** | PHP 8.2 · MySQL · InfinitePay | [Demo](https://techcell.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/techcell) |
 | **Desk Food** | PHP · MySQL · PIX | [GitHub](https://github.com/douglasmouradev/deskfood) |
 | **Rezult** | PHP 8.3 · MySQL · SaaS | [Demo](https://rezult.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/rezult) |
 | **CadeiraLivre** | PHP 8.3 · MySQL · Stripe · Docker | [Demo](https://cadeiralivre.tdesksolutions.com.br) · [GitHub](https://github.com/douglasmouradev/cadeiralivre) |
