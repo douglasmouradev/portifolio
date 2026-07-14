@@ -723,8 +723,17 @@ a {
 }
 
 .project-media--logo img {
+  width: auto;
+  height: auto;
+  max-width: 72%;
+  max-height: 72%;
   object-fit: contain;
-  padding: 2rem;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .project-media--logo::after {
@@ -756,7 +765,8 @@ a {
 }
 
 .project-media--techcell img {
-  padding: 2.5rem;
+  max-width: 78%;
+  max-height: 78%;
 }
 
 .project-media--cadeiralivre {
@@ -773,6 +783,10 @@ a {
 
 .project-card:hover .project-media img {
   transform: scale(1.03);
+}
+
+.project-card:hover .project-media--logo img {
+  transform: translate(-50%, -50%) scale(1.03);
 }
 
 .project-card:hover {
